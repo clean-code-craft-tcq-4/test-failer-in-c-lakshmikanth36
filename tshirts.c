@@ -14,10 +14,7 @@ char size(int cms) {
 
 void testTShirt()
 {
-    int testTShirt;
-    printf("Enter TShirt Value S/M/L-Size in cms:");
-    scanf("%d", &testTShirt);
-    assert((size(testTShirt) == 'S') ||(size(testTShirt) == 'M')|| (size(testTShirt) == 'L'));
+    assert((size(38) == 'S') ||(size(42) == 'M')|| (size(43) == 'L'));
     printf("\nAll is well (maybe!)\n");
 }
 
