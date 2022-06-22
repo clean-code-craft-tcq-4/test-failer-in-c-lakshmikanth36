@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include <assert.h>
+#include "tshirt.h"
 
 char size(int cms) {
     char sizeName = '\0';
@@ -13,10 +12,16 @@ char size(int cms) {
     return sizeName;
 }
 
+void testTShirt()
+{
+    int testTShirt;
+    printf("Enter TShirt Value S/M/L-Size in cms:");
+    scanf("%d", &testTShirt);
+    assert((size(testTShirt) == 'S') ||(size(testTShirt) == 'M')|| (size(testTShirt) == 'L'));
+    printf("\nAll is well (maybe!)\n");
+}
+
 int main() {
-    assert(size(37) == 'S');
-    assert(size(40) == 'M');
-    assert(size(43) == 'L');
-    printf("All is well (maybe!)\n");
-    return 0;
+   testTShirt();
+   return 0;
 }
