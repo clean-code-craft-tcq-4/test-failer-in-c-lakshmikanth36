@@ -1,9 +1,5 @@
-#include <stdio.h>
-#include <assert.h>
-#define numberOfMajorMinorColors 5
-#define COLORMAPVALUE1 24
-#define COLORMAPVALUE2 25
-#define COLORMAPVALUE3 26
+#include "misaligned.h"
+
 int printColorMap() {
     const char* majorColor[] = {"White", "Red", "Black", "Yellow", "Violet"};
     const char* minorColor[] = {"Blue", "Orange", "Green", "Brown", "Slate"};
