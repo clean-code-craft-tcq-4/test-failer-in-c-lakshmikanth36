@@ -1,16 +1,16 @@
 #include <stdio.h>
 #include <assert.h>
-
+#define numberOfMajorMinorColors 5
 int printColorMap() {
     const char* majorColor[] = {"White", "Red", "Black", "Yellow", "Violet"};
     const char* minorColor[] = {"Blue", "Orange", "Green", "Brown", "Slate"};
-    int i = 0, j = 0;
-    for(i = 0; i < 5; i++) {
-        for(j = 0; j < 5; j++) {
-            printf("%d | %s | %s\n", i * 5 + j, majorColor[i], minorColor[i]);
+    int majorColorIndex = 0, minorColorIndex = 0;
+    for(majorColorIndex = 0; majorColorIndex < numberOfMajorMinorColors; majorColorIndex++) {
+        for(minorColorIndex = 0; minorColorIndex < numberOfMajorMinorColors; minorColorIndex++) {
+            printf("%d | %s | %s\n", majorColorIndex * 5 + minorColorIndex, majorColor[i], minorColor[i]);
         }
     }
-    return i * j;
+    return  majorColorIndex * minorColorIndex;
 }
 
 int main() {
