@@ -15,12 +15,15 @@ int printColorMap() {
     }
     return  majorColorIndex * minorColorIndex;
 }
-
-int main() {
+void testprintColorMap()
+{
     int result = printColorMap();
     assert(result == COLORMAPVALUE1);
     assert(result == COLORMAPVALUE2);
     assert(result == COLORMAPVALUE3);
     printf("All is well (maybe!)\n");
+}
+int main() {
+    testprintColorMap();
     return 0;
 }
