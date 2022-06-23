@@ -13,9 +13,9 @@ int printColorMap() {
     return i * j;
 }
 
-int main() {
-    int result = printColorMap();
-    assert(result == 25);
-    printf("All is well (maybe!)\n");
-    return 0;
-}
+// int main() {
+//     int result = printColorMap();
+//     assert(result == 25);
+//     printf("All is well (maybe!)\n");
+//     return 0;
+// }
