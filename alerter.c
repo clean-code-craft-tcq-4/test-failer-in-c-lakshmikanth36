@@ -1,6 +1,11 @@
 #include <stdio.h>
 #include <assert.h>
-
+#define THERSHOLD_STUB_VALUE 500
+#define MAX_STUB_VALUE 200
+#define FRENHEIT_VALUE1 400.5
+#define FRENHEIT_VALUE2 303.6
+#define TRUE 0
+#define FALSE 1
 int alertFailureCount = 0;
 
 int networkAlertStub(float celcius) {
@@ -8,13 +13,13 @@ int networkAlertStub(float celcius) {
     // Return 200 for ok
     // Return 500 for not-ok
     // stub always succeeds and returns 200
-    if(celcius <=200) 
+    if(celcius <=MAX_STUB_VALUE) 
     {
-        return 200;
+        return MAX_STUB_VALUE;
     }
     else if 
     {
-        return 500;
+        return THERSHOLD_STUB_VALUE;
     }
     
 }
@@ -22,7 +27,7 @@ int networkAlertStub(float celcius) {
 void alertInCelcius(float farenheit) {
     float celcius = (farenheit - 32) * 5 / 9;
     int returnCode = networkAlertStub(celcius);
-    if (returnCode != 200) {
+    if (returnCode != MAX_STUB_VALUE) {
         // non-ok response is not an error! Issues happen in life!
         // let us keep a count of failures to report
         // However, this code doesn't count failures!
@@ -32,10 +37,10 @@ void alertInCelcius(float farenheit) {
 }
 
 int main() {
-    alertInCelcius(400.5);
-    assert(alertFailureCount == 1);
-    alertInCelcius(303.6);
-    assert(alertFailureCount == 0);
+    alertInCelcius(FRENHEIT_VALUE1);
+    assert(alertFailureCount == FALSE);
+    alertInCelcius(FRENHEIT_VALUE2);
+    assert(alertFailureCount == TRUE);
     printf("%d alerts failed.\n", alertFailureCount);
     printf("All is well (maybe!)\n");
     return 0;
