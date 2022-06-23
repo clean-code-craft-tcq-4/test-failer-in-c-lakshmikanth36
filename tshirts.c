@@ -1,7 +1,4 @@
 #include "tshirt.h"
-#define TSHIRTSIZE_S 38
-#define TSHIRTSIZE_L 42
-
 char size(int cms) {
     char sizeName = '\0';
     if(cms < TSHIRTSIZE_S) {
