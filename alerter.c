@@ -13,15 +13,10 @@ int networkAlertStub(float celcius) {
     // Return 200 for ok
     // Return 500 for not-ok
     // stub always succeeds and returns 200
-    if(celcius <=MAX_STUB_VALUE) 
-    {
+    if(celcius <=MAX_STUB_VALUE)
         return MAX_STUB_VALUE;
-    }
-    else if 
-    {
+    else
         return THERSHOLD_STUB_VALUE;
-    }
-    
 }
 
 void alertInCelcius(float farenheit) {
