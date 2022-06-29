@@ -1,9 +1,9 @@
 #include "tshirt.h"
 char size(int cms) {
     char sizeName = '\0';
-    if(cms < TSHIRTSIZE_S) {
+    if(cms <=TSHIRTSIZE_S) {
         sizeName = 'S';
-    } else if(cms > TSHIRTSIZE_S && cms < TSHIRTSIZE_L) {
+    } else if(cms > TSHIRTSIZE_S && cms <= TSHIRTSIZE_L) {
         sizeName = 'M';
     } else if(cms > TSHIRTSIZE_L) {
         sizeName = 'L';
