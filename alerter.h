@@ -8,5 +8,5 @@
 #define FALSE 1
 int alertFailureCount = 0;
 int networkAlertStub(float celcius);
-void alertInCelcius(float farenheit);
+int alertInCelcius(float farenheit);
 void testalertInCelcius();
