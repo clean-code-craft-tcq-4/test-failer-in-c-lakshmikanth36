@@ -27,8 +27,8 @@ int alertInCelcius(float farenheit) {
 void testalertInCelcius()
 {
     assert(alertInCelcius(FRENHEIT_VALUE1)==alertFailureCount);
-    assert(alertInCelcius(FRENHEIT_VALUE2)==alertFailureCount+1);
-    assert(alertInCelcius(FRENHEIT_VALUE3)==alertFailureCount+2);
+    assert(alertInCelcius(FRENHEIT_VALUE2)==1);
+    assert(alertInCelcius(FRENHEIT_VALUE3)==2);
     printf("%d alerts failed.\n", alertFailureCount);
     printf("All is well (maybe!)\n");
 }
