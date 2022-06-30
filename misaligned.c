@@ -6,10 +6,10 @@ int printColorMap() {
     int majorColorIndex = 0, minorColorIndex = 0;
     for(majorColorIndex = 0; majorColorIndex < numberOfMajorMinorColors; majorColorIndex++) {
         for(minorColorIndex = 0; minorColorIndex < numberOfMajorMinorColors; minorColorIndex++) {
-            printf("%d | %s | %s\n", (majorColorIndex * numberOfMajorMinorColors + minorColorIndex), majorColor[majorColorIndex], minorColor[minorColorIndex]);
+            printf("%d | %s | %s\n", (majorColorIndex * numberOfMajorMinorColors + minorColorIndex+1), majorColor[majorColorIndex], minorColor[minorColorIndex]);
         }
     }
-    return  majorColorIndex * minorColorIndex+1;
+    return  majorColorIndex * minorColorIndex;
 }
 void testprintColorMap()
 {
