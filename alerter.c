@@ -26,9 +26,7 @@ int alertInCelcius(float farenheit) {
         alertFailureCount += 1;
     }
     return alertFailureCount;
-#endif
-    else 
- #ifdef PRODUCT_ENVIRONMENT
+ #elseif
      return MAX_STUB_VALUE;
  #endif    
 }
