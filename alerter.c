@@ -13,10 +13,7 @@ int networkAlertStub(float celcius) {
         return THERSHOLD_STUB_VALUE;
 }
 
-int networkAlert(float celcius)
-{
-    return 0;
-}
+
 int alertInCelcius(float farenheit) {
     float celcius = (farenheit - 32) * 5 / 9;
     int returnCode = networkAlertStub(celcius);
@@ -30,8 +27,9 @@ int alertInCelcius(float farenheit) {
     }
     return alertFailureCount;
 #endif
+    else 
  #ifdef PRODUCT_ENVIRONMENT
-    returnCode = networkAlert(celcius);
+     return MAX_STUB_VALUE;
  #endif    
 }
 
