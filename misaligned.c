@@ -14,9 +14,7 @@ int printColorMap() {
 void testprintColorMap()
 {
     int result = printColorMap();
-    assert(result == COLORMAPVALUE1);
-    assert(result == COLORMAPVALUE2);
-    assert(result == COLORMAPVALUE3);
+    assert(result == 25);
     printf("All is well (maybe!)\n");
 }
 int main() {
