@@ -9,7 +9,7 @@ int printColorMap() {
             printf("%d | %s | %s\n", (majorColorIndex * numberOfMajorMinorColors + minorColorIndex), majorColor[majorColorIndex], minorColor[minorColorIndex]);
         }
     }
-    return  majorColorIndex * minorColorIndex;
+    return  majorColorIndex * minorColorIndex+1;
 }
 void testprintColorMap()
 {
