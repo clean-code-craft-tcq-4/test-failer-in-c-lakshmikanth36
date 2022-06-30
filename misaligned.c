@@ -2,15 +2,14 @@
    
 const char* majorColor[] = {"White", "Red", "Black", "Yellow", "Violet"};
 const char* minorColor[] = {"Blue", "Orange", "Green", "Brown", "Slate"};
-
+int majorColorIndex = 0, minorColorIndex = 0;
 int GetprintColorMap()
 {
     return (majorColorIndex * numberOfMajorMinorColors + minorColorIndex+1);
 }
 
 int printColorMap() {
-     int majorColorIndex = 0, minorColorIndex = 0;
-    for(majorColorIndex = 0; majorColorIndex < numberOfMajorMinorColors; majorColorIndex++) {
+        for(majorColorIndex = 0; majorColorIndex < numberOfMajorMinorColors; majorColorIndex++) {
         for(minorColorIndex = 0; minorColorIndex < numberOfMajorMinorColors; minorColorIndex++) {
             printf("%d | %s | %s\n",GetprintColorMap(), majorColor[majorColorIndex], minorColor[minorColorIndex]);
         }
