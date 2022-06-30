@@ -6,7 +6,7 @@
 #define FRENHEIT_VALUE2 400.5
 #define FRENHEIT_VALUE3 500.5
 #define ALERT_FAILCOUNT1 1
-#define ALERT_FAILCOINT2 2
+#define ALERT_FAILCOUNT2 2
 int alertFailureCount = 0;
 int networkAlertStub(float celcius);
 int alertInCelcius(float farenheit);
