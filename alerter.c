@@ -1,5 +1,5 @@
 #include "alerter.h"
-
+int alertFailureCount =0;
 int networkAlertStub(float celcius) {
     printf("ALERT: Temperature is %.1f celcius.\n", celcius);
     // Return 200 for ok
@@ -25,8 +25,10 @@ void alertInCelcius(float farenheit) {
 
 void testalertInCelcius()
 {
-    alertInCelcius(FRENHEIT_VALUE1);
-    assert(alertFailureCount == FALSE);
+    //alertInCelcius(FRENHEIT_VALUE1);
+    //assert(alertFailureCount == FALSE);
+    assert(alertInCelcius(400.5)==1);
+    assert(alertInCelcius(303.6)==0);
     printf("%d alerts failed.\n", alertFailureCount);
     printf("All is well (maybe!)\n");
 }
