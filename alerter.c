@@ -1,6 +1,4 @@
 #include "alerter.h"
-#define PRODUCT_ENVIRONMENT 1
-#define TEST_ENVIRNOMENT 0
 
 int networkAlertStub(float celcius) {
     printf("ALERT: Temperature is %.1f celcius.\n", celcius);
@@ -17,7 +15,6 @@ int networkAlertStub(float celcius) {
 int alertInCelcius(float farenheit) {
     float celcius = (farenheit - 32) * 5 / 9;
     int returnCode = networkAlertStub(celcius);
- #ifdef  TEST_ENVIRNOMENT   
     if (returnCode != MAX_STUB_VALUE) {
         // non-ok response is not an error! Issues happen in life!
         // let us keep a count of failures to report
@@ -25,10 +22,7 @@ int alertInCelcius(float farenheit) {
         // Add a test below to catch this bug. Alter the stub above, if needed.
         alertFailureCount += 1;
     }
-    return alertFailureCount;
- #elseif
-     return MAX_STUB_VALUE;
- #endif    
+    return alertFailureCount;  
 }
 
 void testalertInCelcius()
