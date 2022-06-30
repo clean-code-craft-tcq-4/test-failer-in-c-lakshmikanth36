@@ -28,6 +28,7 @@ void testalertInCelcius()
 {
     //alertInCelcius(FRENHEIT_VALUE1);
     //assert(alertFailureCount == FALSE);
+    assert(alertInCelcius(303.6)==0);
     assert(alertInCelcius(400.5)==1);
     assert(alertInCelcius(500.5)==2);
     printf("%d alerts failed.\n", alertFailureCount);
